@@ -34,7 +34,7 @@ export const ContactsListWrapper = () => {
     (onDataContacts().length !== 0 || filterContactsState !== '') && (
       <ContactsListBox>
         {/* <ContactsListTitle>Contacts</ContactsListTitle> */}
-        <ContactsListTitle>Contacts Privet</ContactsListTitle>
+        <ContactsListTitle>Contacts Privet kak semya</ContactsListTitle>
         <Filter />
         <ContactItems>
           {onDataContacts().map(({ name, number, id }) => (
