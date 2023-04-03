@@ -15,17 +15,6 @@ export const contactsSlice = createSlice({
   },
 });
 
-// const persistConfig = {
-//   key: 'root',
-//   version: 1,
-//   storage,
-// };
-
-// export const contactsReducer = persistReducer(
-//   persistConfig,
-//   contactsSlice.reducer
-// );
-
 export const { addContact, deleteContact } = contactsSlice.actions;
 
 // Selectors
