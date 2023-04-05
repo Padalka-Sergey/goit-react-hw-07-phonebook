@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { Input, Btn, Label, Form } from './ContactForm.styled';
-import { nanoid } from 'nanoid';
+// import { nanoid } from 'nanoid';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { addContact, getContactsValue } from 'redux/contactsSlice';
+import { getContactsValue } from 'redux/selectors';
+import { addContact } from 'redux/contactsOperations';
 
 export function ContactForm() {
   const dispatch = useDispatch();
@@ -36,12 +37,13 @@ export function ContactForm() {
       return true;
     }
 
-    const newContact = {
-      ...dataHandle,
-      id: nanoid(),
-    };
+    // const newContact = {
+    //   ...dataHandle,
+    //   id: nanoid(),
+    // };
 
-    dispatch(addContact(newContact));
+    // dispatch(addContact(newContact));
+    dispatch(addContact({ name, number }));
   };
 
   const handleSubmit = evt => {

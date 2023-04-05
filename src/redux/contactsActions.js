@@ -1,14 +1,14 @@
-import { createAction } from '@reduxjs/toolkit';
+// import { createAction } from '@reduxjs/toolkit';
 
 // pending
-export const fetchContactsRequest = createAction(
-  'contacts/fetchContactsRequest'
-);
+// export const fetchContactsRequest = createAction(
+//   'contacts/fetchContactsRequest'
+// );
 
 // fulfilled
-export const fetchContactsSuccess = createAction(
-  'contacts/fetchContactsSuccess'
-);
+// export const fetchContactsSuccess = createAction(
+//   'contacts/fetchContactsSuccess'
+// );
 
 // rejected
-export const fetchContactsError = createAction('contacts/fetchContactsError');
+// export const fetchContactsError = createAction('contacts/fetchContactsError');
