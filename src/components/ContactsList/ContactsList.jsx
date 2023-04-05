@@ -33,14 +33,17 @@ export const ContactsListWrapper = () => {
   }, [dispatch]);
 
   const onFilterContacts = () => {
-    const normFilter = filterContactsState?.toLowerCase();
-    return contacts.filter(contactEl =>
-      contactEl.name.toLowerCase().includes(normFilter)
-    );
+    if (filterContactsState) {
+      const normFilter = filterContactsState.toLowerCase();
+      return contacts.filter(contactEl =>
+        contactEl.name.toLowerCase().includes(normFilter)
+      );
+    }
   };
 
   const onDataContacts = () => {
-    if (filterContactsState !== '') {
+    // if (filterContactsState !== '') {
+    if (filterContactsState) {
       return onFilterContacts();
     }
     return contacts;
@@ -59,7 +62,8 @@ export const ContactsListWrapper = () => {
               key={id}
               id={id}
               name={name}
-              number={phone}
+              phone={phone}
+              // phone={number}
             ></ContactsItem>
           ))}
         </ContactItems>
