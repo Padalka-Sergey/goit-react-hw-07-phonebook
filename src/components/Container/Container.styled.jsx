@@ -7,7 +7,7 @@ export const ContainerBox = styled.div`
   margin-right: auto;
   display: flex;
   flex-direction: column;
-  width: 350px;
+  width: 400px;
   /* border: 1px solid black; */
   /* padding-left: 20px; */
 `;

@@ -1,4 +1,3 @@
-// import PropTypes from 'prop-types';
 import { ContactsItem } from 'components/ContactItem/ContactItem';
 import { Filter } from 'components/Filter/Filter';
 
@@ -42,7 +41,6 @@ export const ContactsListWrapper = () => {
   };
 
   const onDataContacts = () => {
-    // if (filterContactsState !== '') {
     if (filterContactsState) {
       return onFilterContacts();
     }
@@ -50,34 +48,20 @@ export const ContactsListWrapper = () => {
   };
 
   return (
-    // { isLoading && !error && <b>Request in progress...</b>}
-    (onDataContacts().length !== 0 || filterContactsState !== '') && (
-      <ContactsListBox>
-        {/* <ContactsListTitle>Contacts</ContactsListTitle> */}
-        <ContactsListTitle>Contacts</ContactsListTitle>
-        <Filter />
-        <ContactItems>
-          {onDataContacts().map(({ name, phone, id }) => (
-            <ContactsItem
-              key={id}
-              id={id}
-              name={name}
-              phone={phone}
-              // phone={number}
-            ></ContactsItem>
-          ))}
-        </ContactItems>
-      </ContactsListBox>
-    )
+    <ContactsListBox>
+      <ContactsListTitle>Contacts</ContactsListTitle>
+      <Filter />
+      {isLoading && !error && <b>Request in progress...</b>}
+      <ContactItems>
+        {onDataContacts().map(({ name, phone, id }) => (
+          <ContactsItem
+            key={id}
+            id={id}
+            name={name}
+            phone={phone}
+          ></ContactsItem>
+        ))}
+      </ContactItems>
+    </ContactsListBox>
   );
 };
-
-// ContactsListWrapper.propTypes = {
-//   dataContacts: PropTypes.arrayOf(
-//     PropTypes.exact({
-//       id: PropTypes.string.isRequired,
-//       name: PropTypes.string.isRequired,
-//       number: PropTypes.string.isRequired,
-//     })
-//   ),
-// };

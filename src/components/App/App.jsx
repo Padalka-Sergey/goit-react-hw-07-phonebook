@@ -1,4 +1,3 @@
-// import { data } from 'data/data';
 import { Container } from 'components/Container/Container';
 import { ContactForm } from 'components/ContactForm/ContactForm';
 import { ContactsListWrapper } from 'components/ContactsList/ContactsList';
